@@ -179,7 +179,7 @@ body {
   background-position: 75px bottom;
 }
 .EmailEventsList > div + div {
-  margin-top: 9px;
+  margin-top: 42px;
 }
 .EmailEventsList .Event {
   display: flex;
@@ -234,6 +234,19 @@ body {
   top: 84px;
   left: 50%;
   margin-left: -90px;
+}
+.Middle .Pulsate {
+  position: absolute;
+  z-index: 0;
+  top: 94px;
+  left: 50%;
+  margin-left: -75px;
+}
+.Middle .Pulsate > div {
+  width: 150px;
+  height: 150px;
+  background: #2986ad;
+  border-radius: 100%;
 }
 .Middle .Arrow1 {
   z-index: 0;

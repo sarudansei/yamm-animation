@@ -32,6 +32,16 @@ const CellStatus = ({ isDisplay, changeColor, colors, index }) => {
 
   useEffect(() => {
     if (changeColor[index]) {
+      setSpringDisplay({
+        opacity: 1,
+        transform: "scale(1.2)"
+      });
+      setTimeout(() => {
+        setSpringDisplay({
+          opacity: 1,
+          transform: "scale(1)"
+        });
+      }, 300);
       setSpringColor({
         color1: colors[0],
         color2: colors[1]

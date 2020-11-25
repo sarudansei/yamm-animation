@@ -8,6 +8,28 @@ import Arrow3 from "./Arrow3.svg";
 
 import "./styles.css";
 
+const Pulsate = ({ index }) => {
+  const [spring, setSpring] = useSpring(() => ({
+    opacity: 1,
+    transform: "scale(1)"
+  }));
+
+  useEffect(() => {
+    setTimeout(() => {
+      setSpring({
+        opacity: 0,
+        transform: "scale(1.5)"
+      });
+    }, index * 800);
+  }, []); // eslint-disable-line
+
+  return (
+    <div className="Pulsate">
+      <animated.div style={spring}></animated.div>
+    </div>
+  );
+};
+
 const Arrow = ({ src, index }) => {
   const [spring, setSpring] = useSpring(() => ({
     opacity: 0
@@ -42,6 +64,10 @@ export default function Middle() {
   return (
     <div className="Middle">
       <img src={YammLogo} alt="Gmail" className="Logo" />
+      <Pulsate index={1} />
+      <Pulsate index={2} />
+      <Pulsate index={3} />
+      <Pulsate index={4} />
       <Arrow src={Arrow1} index={1} />
       <Arrow src={Arrow2} index={2} />
       <Arrow src={Arrow3} index={3} />

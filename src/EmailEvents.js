@@ -19,7 +19,7 @@ const Event = ({ index, firstname, eventName, text }) => {
     from: {
       height: 0,
       opacity: 0,
-      transform: "scale(1.5)"
+      transform: "translate(40px)"
     },
     enter: (item) => async (next) => {
       if (item && nodeRef.current) {
@@ -28,7 +28,7 @@ const Event = ({ index, firstname, eventName, text }) => {
         await next({
           height,
           opacity: 1,
-          transform: "scale(1)"
+          transform: "translate(0)"
         });
       }
     }
@@ -57,7 +57,7 @@ export default function EmailEvents() {
   useEffect(() => {
     setTimeout(() => {
       setEmails({
-        total: 142
+        total: 746
       });
     }, 1e3);
   }, []);
