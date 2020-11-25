@@ -5,6 +5,8 @@ body {
   display: flex;
   font-family: "Inter", sans-serif;
   font-weight: 400;
+  user-select: none;
+  width: 1608px;
 }
 .GoogleSheets {
   margin-bottom: 54px;
@@ -17,7 +19,6 @@ body {
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
   color: #767574;
-  user-select: none;
 }
 .GoogleSheets .Head,
 .Gmail .Head {
@@ -222,4 +223,33 @@ body {
 }
 .EventReply .EventText span {
   color: #2295ff;
+}
+.Middle {
+  position: relative;
+  width: 500px;
+}
+.Middle .Logo {
+  position: absolute;
+  z-index: 1;
+  top: 84px;
+  left: 50%;
+  margin-left: -90px;
+}
+.Middle .Arrow1 {
+  z-index: 0;
+  position: absolute;
+  top: 164px;
+  left: 0;
+}
+.Middle .Arrow2 {
+  z-index: 0;
+  position: absolute;
+  top: 145px;
+  left: 0;
+}
+.Middle .Arrow3 {
+  z-index: 0;
+  position: absolute;
+  right: 0;
+  top: 145px;
 }

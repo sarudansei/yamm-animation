@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import GoogleSheets from "./GoogleSheets";
 import Gmail from "./Gmail";
 import EmailEvents from "./EmailEvents";
+import Middle from "./Middle";
 
 import "./styles.css";
 
@@ -48,6 +49,7 @@ export default function App() {
         <GoogleSheets displayStatus={displayStatus} colorStatus={colorStatus} />
         <Gmail />
       </div>
+      <Middle />
       <div>
         <EmailEvents />
       </div>
