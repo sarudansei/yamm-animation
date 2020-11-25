@@ -78,10 +78,13 @@ body {
   padding: 7px 0;
   border-radius: 3px;
 }
+.Status .Sausage {
+  background: #b6b4b3;
+}
 .Sausage {
   height: 6px;
-  background: #767574;
-  opacity: 0.3;
+  background: #d5d2d1;
+  opacity: 1;
   margin: 0 7px;
   border-radius: 100px;
 }
@@ -168,22 +171,39 @@ body {
   margin-left: 20px;
 }
 .EmailEventsList {
-  padding: 61px 0 60px 52px;
+  padding: 62px 0 61px 52px;
   color: #443737;
   background-image: url("Timeline.png");
   background-repeat: no-repeat;
   background-position: 75px bottom;
 }
+.EmailEventsList > div + div {
+  margin-top: 9px;
+}
 .EmailEventsList .Event {
   display: flex;
   align-items: center;
 }
-.EmailEventsList .Event + .Event {
-  margin-top: 42px;
-}
-.EmailEventsList .Event img {
+.EmailEventsList .Event .Picture {
   border-radius: 100%;
+  width: 40px;
+  height: 40px;
   border: 6px solid #fff;
+}
+.EmailEventsList .Event .Picture1 {
+  background-image: url("1.jpg");
+}
+.EmailEventsList .Event .Picture2 {
+  background-image: url("2.jpg");
+}
+.EmailEventsList .Event .Picture3 {
+  background-image: url("3.jpg");
+}
+.EmailEventsList .Event .Picture4 {
+  background-image: url("4.jpg");
+}
+.EmailEventsList .Event .Picture5 {
+  background-image: url("5.jpg");
 }
 .EmailEventsList .Event .EventText {
   margin-left: 26px;

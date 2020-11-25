@@ -1,41 +1,76 @@
-import React, { useEffect } from "react";
-import { animated, useSpring } from "react-spring";
+import React, { useState, useEffect, useRef } from "react";
+import { animated, useSpring, useTransition } from "react-spring";
 
 import Plane from "./Plane.svg";
 
 import "./styles.css";
 
 const Event = ({ index, firstname, eventName, text }) => {
-  const [spring, setSpring] = useSpring(() => ({
-    opacity: 0,
-    transform: "scale(1.5)"
-  }));
+  const nodeRef = useRef();
+  const [isDisplay, setIsDisplay] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
-      setSpring({
-        opacity: 1,
-        transform: "scale(1)"
-      });
+      setIsDisplay(true);
     }, index * 500);
   }, []);
 
-  return (
-    <animated.div className={`Event Event${eventName}`} style={spring}>
-      <img src={`/${index}.jpg`} alt={index} />
-      <div className="EventText">
-        {firstname} <span>{text}</span>
-      </div>
-    </animated.div>
+  const transitions = useTransition(isDisplay, null, {
+    from: {
+      height: 0,
+      opacity: 0,
+      transform: "scale(1.5)"
+    },
+    enter: (item) => async (next) => {
+      if (item && nodeRef.current) {
+        const { height } = nodeRef.current.getBoundingClientRect();
+
+        await next({
+          height,
+          opacity: 1,
+          transform: "scale(1)"
+        });
+      }
+    }
+  });
+
+  return transitions.map(
+    ({ item, key, props }) =>
+      item && (
+        <animated.div style={props} key={key}>
+          <div ref={nodeRef} className={`Event Event${eventName}`}>
+            <div className={`Picture Picture${index}`} />
+            <div className="EventText">
+              {firstname} <span>{text}</span>
+            </div>
+          </div>
+        </animated.div>
+      )
   );
 };
 
 export default function EmailEvents() {
+  const [emails, setEmails] = useSpring(() => ({
+    total: 0
+  }));
+
+  useEffect(() => {
+    setTimeout(() => {
+      setEmails({
+        total: 142
+      });
+    }, 1e3);
+  }, []);
+
   return (
     <div className="EmailEvents">
       <div className="EmailsSent">
         <img src={Plane} alt="Plane" />
-        <div class="Text">142 emails have been sent</div>
+        <animated.div className="Text">
+          {emails.total.interpolate(
+            (v) => `${v.toFixed(0)} emails have been sent`
+          )}
+        </animated.div>
       </div>
       <div className="EmailEventsList">
         <Event
