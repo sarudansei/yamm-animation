@@ -1,0 +1,169 @@
+body {
+  background-color: #0b4f6c;
+}
+.App {
+  display: flex;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+.GoogleSheets {
+  margin-bottom: 54px;
+}
+.GoogleSheets,
+.Gmail {
+  width: 554px;
+  height: 324px;
+  background: #ffffff;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  color: #767574;
+  user-select: none;
+}
+.GoogleSheets .Head,
+.Gmail .Head {
+  padding: 20px;
+  display: flex;
+  font-size: 24px;
+}
+.GoogleSheets .Brand,
+.Gmail .Brand {
+  margin-left: 17px;
+  display: flex;
+  align-items: center;
+}
+.GoogleSheets .Table {
+  margin: 0 20px;
+  display: grid;
+  flex-direction: column;
+}
+.GoogleSheets .Row {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  height: 32px;
+}
+.GoogleSheets .Cell {
+  display: flex;
+  box-sizing: border-box;
+  width: calc(100% / 4);
+  align-items: center;
+  padding: 0 7px;
+  border-right: solid 1px #e0dbd8;
+  border-bottom: solid 1px #e0dbd8;
+}
+.GoogleSheets .Row:first-child .Cell {
+  border-top: solid 1px #e0dbd8;
+  justify-content: center;
+  font-size: 16px;
+  background-color: #f9f7f6;
+}
+.GoogleSheets .Row .Cell:first-child {
+  border-left: solid 1px #e0dbd8;
+}
+.GoogleSheets .Row:first-child .Cell:first-child {
+  border-top-left-radius: 6px;
+}
+.GoogleSheets .Row:first-child .Cell:last-child {
+  border-top-right-radius: 6px;
+}
+.GoogleSheets .Row:last-child .Cell:first-child {
+  border-bottom-left-radius: 6px;
+}
+.GoogleSheets .Row:last-child .Cell:last-child {
+  border-bottom-right-radius: 6px;
+}
+.Status {
+  background-color: #dedcdb;
+  width: 100%;
+  padding: 7px 0;
+  border-radius: 3px;
+}
+.Sausage {
+  height: 6px;
+  background: #767574;
+  opacity: 0.3;
+  margin: 0 7px;
+  border-radius: 100px;
+}
+.Sausage + .Sausage {
+  margin-left: 0;
+}
+.Draft {
+  margin: 0 20px;
+}
+.Draft .Title {
+  height: 34px;
+  background: #767574;
+  border-radius: 6px 6px 0px 0px;
+  padding: 0 6px;
+  display: flex;
+  align-items: center;
+}
+.Draft .Title .Sausage {
+  background: #ffffff;
+  opacity: 0.3;
+}
+.Draft .Title .Controls {
+  display: flex;
+  padding-right: 6px;
+  margin-left: auto;
+}
+.Draft .Title .Control {
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+  background: #ffffff;
+  opacity: 0.3;
+  margin-left: 6px;
+}
+.Draft .Email {
+  border: 1px solid black;
+  border: 1px solid #e0dbd8;
+  box-sizing: border-box;
+  border-top: 0;
+  border-radius: 0 0 6px 6px;
+  padding: 20px;
+}
+.Draft .EmailSausagesRow {
+  display: flex;
+  flex-direction: row;
+}
+.Draft .EmailSausagesRow + .EmailSausagesRow {
+  margin-top: 12px;
+}
+.Draft .EmailSausagesRow .Sausage:first-child {
+  margin-left: 0;
+}
+.Draft .EmailTo,
+.Draft .EmailSubject {
+  color: #bab9b9;
+  border-bottom: 1px solid #e0dbd8;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+}
+.Draft .EmailSubject {
+  color: #767574;
+}
+.Draft .EmailBodyIntro {
+  margin: 20px 0 15px;
+}
+.EmailEvents {
+  width: 544px;
+  background: #ffffff;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+}
+.EmailsSent {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  color: #f05b3a;
+  padding: 0 0 0 20px;
+  height: 153px;
+  background: #ffffff;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+}
+.EmailsSent .Text {
+  margin-left: 20px;
+}
