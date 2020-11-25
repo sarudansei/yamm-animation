@@ -152,11 +152,11 @@ body {
   background: #ffffff;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
+  font-size: 28px;
 }
 .EmailsSent {
   display: flex;
   align-items: center;
-  font-size: 28px;
   color: #f05b3a;
   padding: 0 0 0 20px;
   height: 153px;
@@ -166,4 +166,40 @@ body {
 }
 .EmailsSent .Text {
   margin-left: 20px;
+}
+.EmailEventsList {
+  padding: 61px 0 60px 52px;
+  color: #443737;
+  background-image: url("Timeline.png");
+  background-repeat: no-repeat;
+  background-position: 75px bottom;
+}
+.EmailEventsList .Event {
+  display: flex;
+  align-items: center;
+}
+.EmailEventsList .Event + .Event {
+  margin-top: 42px;
+}
+.EmailEventsList .Event img {
+  border-radius: 100%;
+  border: 6px solid #fff;
+}
+.EmailEventsList .Event .EventText {
+  margin-left: 26px;
+}
+.EventOpen .EventText span {
+  color: #85c76f;
+}
+.EventClick .EventText span {
+  color: #59a63f;
+}
+.EventUnsub .EventText span {
+  color: #d4a661;
+}
+.EventBounce .EventText span {
+  color: #dc6b5c;
+}
+.EventReply .EventText span {
+  color: #2295ff;
 }

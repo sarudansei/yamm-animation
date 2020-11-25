@@ -9,11 +9,11 @@ export default function App() {
   return (
     <div className="App">
       <div>
-        <EmailEvents />
-      </div>
-      <div>
         <GoogleSheets />
         <Gmail />
+      </div>
+      <div>
+        <EmailEvents />
       </div>
     </div>
   );
