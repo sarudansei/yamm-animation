@@ -6,34 +6,40 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   user-select: none;
-  width: 1608px;
+  width: 804px;
 }
 .GoogleSheets {
-  margin-bottom: 54px;
+  margin-bottom: 27px;
 }
 .GoogleSheets,
 .Gmail {
-  width: 554px;
-  height: 324px;
+  width: 277px;
+  height: 162px;
   background: #ffffff;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
-  border-radius: 12px;
+  border-radius: 6px;
   color: #767574;
 }
 .GoogleSheets .Head,
 .Gmail .Head {
-  padding: 20px;
+  padding: 10px 10px 8px;
   display: flex;
-  font-size: 24px;
+  font-size: 12px;
+}
+.GoogleSheets .Head img {
+  height: 20px;
+}
+.Gmail .Head img {
+  width: 18px;
 }
 .GoogleSheets .Brand,
 .Gmail .Brand {
-  margin-left: 17px;
+  margin-left: 8px;
   display: flex;
   align-items: center;
 }
 .GoogleSheets .Table {
-  margin: 0 20px;
+  margin: 0 10px;
   display: grid;
   flex-direction: column;
 }
@@ -41,65 +47,69 @@ body {
   display: flex;
   flex-direction: row;
   flex-flow: row wrap;
-  height: 32px;
+  height: 16px;
 }
 .GoogleSheets .Cell {
   display: flex;
   box-sizing: border-box;
   width: calc(100% / 4);
   align-items: center;
-  padding: 0 7px;
+  padding: 0 3px;
   border-right: solid 1px #e0dbd8;
   border-bottom: solid 1px #e0dbd8;
+}
+.GoogleSheets .Row:first-child {
+  height: 18px;
 }
 .GoogleSheets .Row:first-child .Cell {
   border-top: solid 1px #e0dbd8;
   justify-content: center;
-  font-size: 16px;
+  font-size: 9px;
   background-color: #f9f7f6;
 }
 .GoogleSheets .Row .Cell:first-child {
   border-left: solid 1px #e0dbd8;
 }
 .GoogleSheets .Row:first-child .Cell:first-child {
-  border-top-left-radius: 6px;
+  border-top-left-radius: 3px;
 }
 .GoogleSheets .Row:first-child .Cell:last-child {
-  border-top-right-radius: 6px;
+  border-top-right-radius: 3px;
 }
 .GoogleSheets .Row:last-child .Cell:first-child {
-  border-bottom-left-radius: 6px;
+  border-bottom-left-radius: 3px;
 }
 .GoogleSheets .Row:last-child .Cell:last-child {
-  border-bottom-right-radius: 6px;
+  border-bottom-right-radius: 3px;
 }
 .Status {
   background-color: #dedcdb;
   width: 100%;
-  padding: 7px 0;
+  padding: 3px 0;
   border-radius: 3px;
 }
 .Status .Sausage {
   background: #b6b4b3;
 }
 .Sausage {
-  height: 6px;
+  height: 3px;
   background: #d5d2d1;
   opacity: 1;
-  margin: 0 7px;
+  margin: 0 3px;
   border-radius: 100px;
 }
 .Sausage + .Sausage {
   margin-left: 0;
 }
 .Draft {
-  margin: 0 20px;
+  margin: 0 10px;
+  font-size: 9px;
 }
 .Draft .Title {
-  height: 34px;
+  height: 17px;
   background: #767574;
-  border-radius: 6px 6px 0px 0px;
-  padding: 0 6px;
+  border-radius: 3px 3px 0px 0px;
+  padding: 0 3px;
   display: flex;
   align-items: center;
 }
@@ -109,31 +119,31 @@ body {
 }
 .Draft .Title .Controls {
   display: flex;
-  padding-right: 6px;
+  padding-right: 3px;
   margin-left: auto;
 }
 .Draft .Title .Control {
-  width: 10px;
-  height: 10px;
-  border-radius: 100px;
+  width: 5px;
+  height: 5px;
+  border-radius: 5px;
   background: #ffffff;
   opacity: 0.3;
-  margin-left: 6px;
+  margin-left: 3px;
 }
 .Draft .Email {
   border: 1px solid black;
   border: 1px solid #e0dbd8;
   box-sizing: border-box;
   border-top: 0;
-  border-radius: 0 0 6px 6px;
-  padding: 20px;
+  border-radius: 0 0 3px 3px;
+  padding: 8px 10px;
 }
 .Draft .EmailSausagesRow {
   display: flex;
   flex-direction: row;
 }
 .Draft .EmailSausagesRow + .EmailSausagesRow {
-  margin-top: 12px;
+  margin-top: 5px;
 }
 .Draft .EmailSausagesRow .Sausage:first-child {
   margin-left: 0;
@@ -142,44 +152,47 @@ body {
 .Draft .EmailSubject {
   color: #bab9b9;
   border-bottom: 1px solid #e0dbd8;
-  padding-bottom: 6px;
-  margin-bottom: 10px;
+  padding-bottom: 3px;
+  margin-bottom: 5px;
 }
 .Draft .EmailSubject {
   color: #767574;
 }
 .Draft .EmailBodyIntro {
-  margin: 20px 0 15px;
+  margin: 7px 0 8px;
 }
 .EmailEvents {
-  width: 544px;
+  width: 277px;
   background: #ffffff;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
-  border-radius: 12px;
-  font-size: 28px;
+  border-radius: 6px;
+  font-size: 14px;
 }
 .EmailsSent {
   display: flex;
   align-items: center;
   color: #f05b3a;
-  padding: 0 0 0 20px;
-  height: 153px;
+  padding: 0 0 0 10px;
+  height: 78px;
   background: #ffffff;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
 }
+.EmailsSent img {
+  width: 43px;
+}
 .EmailsSent .Text {
-  margin-left: 20px;
+  margin-left: 10px;
 }
 .EmailEventsList {
-  padding: 62px 0 61px 52px;
+  padding: 30px 0 29px 26px;
   color: #443737;
   background-image: url("Timeline.png");
   background-repeat: no-repeat;
-  background-position: 75px bottom;
+  background-position: 37px bottom;
 }
 .EmailEventsList > div + div {
-  margin-top: 42px;
+  margin-top: 21px;
 }
 .EmailEventsList .Event {
   display: flex;
@@ -187,9 +200,10 @@ body {
 }
 .EmailEventsList .Event .Picture {
   border-radius: 100%;
-  width: 40px;
-  height: 40px;
-  border: 6px solid #fff;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #fff;
+  background-size: cover;
 }
 .EmailEventsList .Event .Picture1 {
   background-image: url("1.jpg");
@@ -207,7 +221,7 @@ body {
   background-image: url("5.jpg");
 }
 .EmailEventsList .Event .EventText {
-  margin-left: 26px;
+  margin-left: 13px;
 }
 .EventOpen .EventText span {
   color: #85c76f;
@@ -226,43 +240,47 @@ body {
 }
 .Middle {
   position: relative;
-  width: 500px;
+  width: 250px;
 }
 .Middle .Logo {
   position: absolute;
   z-index: 1;
-  top: 84px;
+  top: 42px;
   left: 50%;
-  margin-left: -90px;
+  width: 90px;
+  margin-left: -45px;
 }
 .Middle .Pulsate {
   position: absolute;
   z-index: 0;
-  top: 94px;
+  top: 47px;
   left: 50%;
-  margin-left: -75px;
+  margin-left: -37.5px;
 }
 .Middle .Pulsate > div {
-  width: 150px;
-  height: 150px;
+  width: 75px;
+  height: 75px;
   background: #2986ad;
   border-radius: 100%;
 }
 .Middle .Arrow1 {
   z-index: 0;
   position: absolute;
-  top: 164px;
+  top: 82px;
   left: 0;
+  width: 158.5px;
 }
 .Middle .Arrow2 {
   z-index: 0;
   position: absolute;
-  top: 145px;
+  top: 72.5px;
   left: 0;
+  width: 205px;
 }
 .Middle .Arrow3 {
   z-index: 0;
   position: absolute;
   right: 0;
-  top: 145px;
+  top: 72.5px;
+  width: 206px;
 }
