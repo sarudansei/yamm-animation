@@ -255,11 +255,11 @@ body {
   z-index: 0;
   top: 47px;
   left: 50%;
-  margin-left: -37.5px;
+  margin-left: -37px;
 }
 .Middle .Pulsate > div {
-  width: 75px;
-  height: 75px;
+  width: 74px;
+  height: 74px;
   background: #2986ad;
   border-radius: 100%;
 }

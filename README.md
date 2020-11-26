@@ -14,7 +14,6 @@ Created with CodeSandbox
   - #6 55%
 - Animate the logo (I did a pulsate effect, not sure it's the best)
 - Fix "emails" without an S when the number of emails is 0
-- Paul's concern: test to embed + scale down the whole thing
 - Follow the timeline below
 
 # Timeline
