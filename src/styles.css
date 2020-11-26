@@ -30,7 +30,7 @@ body {
   height: 20px;
 }
 .Gmail .Head img {
-  width: 18px;
+  height: 13.5px;
 }
 .GoogleSheets .Brand,
 .Gmail .Brand {
@@ -136,7 +136,7 @@ body {
   box-sizing: border-box;
   border-top: 0;
   border-radius: 0 0 3px 3px;
-  padding: 8px 10px;
+  padding: 10px 10px;
 }
 .Draft .EmailSausagesRow {
   display: flex;
@@ -167,6 +167,7 @@ body {
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
   border-radius: 6px;
   font-size: 14px;
+  transition: opacity 0.2s;
 }
 .EmailsSent {
   display: flex;
@@ -249,24 +250,27 @@ body {
   left: 50%;
   width: 90px;
   margin-left: -45px;
+  transition: opacity 0.2s;
 }
-.Middle .Pulsate {
+.Middle .Loader {
   position: absolute;
   z-index: 0;
-  top: 47px;
+  width: 90px;
+  height: 90px;
+  top: 40px;
   left: 50%;
-  margin-left: -37px;
+  margin-left: -45px;
+  opacity: 0;
+  transition: opacity 0.2s;
 }
-.Middle .Pulsate > div {
-  width: 74px;
-  height: 74px;
-  background: #2986ad;
-  border-radius: 100%;
+.Middle .Arrow {
+  opacity: 0;
+  transition: opacity 0.2s;
 }
 .Middle .Arrow1 {
   z-index: 0;
   position: absolute;
-  top: 82px;
+  top: 81.9px;
   left: 0;
   width: 158.5px;
 }

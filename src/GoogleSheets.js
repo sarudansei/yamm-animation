@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import { animated, useSpring } from "react-spring";
 
 import GoogleSheetsLogo from "./GoogleSheets.svg";
@@ -9,7 +9,15 @@ const Sausage = ({ width, style }) => (
   <animated.div className="Sausage" style={{ width, ...style }} />
 );
 
-const CellStatus = ({ isDisplay, changeColor, colors, index }) => {
+const CellStatus = ({
+  isDisplay,
+  changeColor,
+  colors,
+  index,
+  onRestAnimation
+}) => {
+  const alreadyAnimatedRef = useRef(false);
+
   const [springDisplay, setSpringDisplay] = useSpring(() => ({
     opacity: 0,
     transform: "scale(1.5)"
@@ -24,28 +32,28 @@ const CellStatus = ({ isDisplay, changeColor, colors, index }) => {
       setTimeout(() => {
         setSpringDisplay({
           opacity: 1,
-          transform: "scale(1)"
+          transform: "scale(1)",
+          onRest: () => onRestAnimation(`springDisplay-${index}`)
         });
       }, index * 500);
     }
   }, [isDisplay]);
 
   useEffect(() => {
-    if (changeColor[index]) {
+    if (!alreadyAnimatedRef.current && changeColor[index]) {
       setSpringDisplay({
-        opacity: 1,
-        transform: "scale(1.2)"
+        transform: "scale(1.4)",
+        onRest: () =>
+          setSpringDisplay({
+            transform: "scale(1)"
+          })
       });
-      setTimeout(() => {
-        setSpringDisplay({
-          opacity: 1,
-          transform: "scale(1)"
-        });
-      }, 300);
       setSpringColor({
         color1: colors[0],
         color2: colors[1]
       });
+
+      alreadyAnimatedRef.current = true;
     }
   }, [changeColor]);
 
@@ -69,7 +77,11 @@ const CellStatus = ({ isDisplay, changeColor, colors, index }) => {
   );
 };
 
-export default function GoogleSheets({ displayStatus, colorStatus }) {
+export default function GoogleSheets({
+  displayStatus,
+  colorStatus,
+  onRestAnimation
+}) {
   return (
     <div className="GoogleSheets">
       <div className="Head">
@@ -99,6 +111,7 @@ export default function GoogleSheets({ displayStatus, colorStatus }) {
             colors={["#B7F1A3", "#85C76F"]}
             changeColor={colorStatus}
             isDisplay={displayStatus}
+            onRestAnimation={onRestAnimation}
           />
         </div>
         <div className="Row">
@@ -117,6 +130,7 @@ export default function GoogleSheets({ displayStatus, colorStatus }) {
             colors={["#89D370", "#59A63F"]}
             changeColor={colorStatus}
             isDisplay={displayStatus}
+            onRestAnimation={onRestAnimation}
           />
         </div>
         <div className="Row">
@@ -135,6 +149,7 @@ export default function GoogleSheets({ displayStatus, colorStatus }) {
             colors={["#B7F1A3", "#85C76F"]}
             changeColor={colorStatus}
             isDisplay={displayStatus}
+            onRestAnimation={onRestAnimation}
           />
         </div>
         <div className="Row">
@@ -153,6 +168,7 @@ export default function GoogleSheets({ displayStatus, colorStatus }) {
             colors={["#FACC87", "#D4A661"]}
             changeColor={colorStatus}
             isDisplay={displayStatus}
+            onRestAnimation={onRestAnimation}
           />
         </div>
         <div className="Row">
@@ -171,6 +187,7 @@ export default function GoogleSheets({ displayStatus, colorStatus }) {
             colors={["#FA9587", "#DC6B5C"]}
             changeColor={colorStatus}
             isDisplay={displayStatus}
+            onRestAnimation={onRestAnimation}
           />
         </div>
         <div className="Row">
@@ -189,6 +206,7 @@ export default function GoogleSheets({ displayStatus, colorStatus }) {
             colors={["#8AC7FF", "#2295FF"]}
             changeColor={colorStatus}
             isDisplay={displayStatus}
+            onRestAnimation={onRestAnimation}
           />
         </div>
       </div>

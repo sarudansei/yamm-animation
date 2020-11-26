@@ -32,7 +32,7 @@ Created with CodeSandbox
 ## Step 3
 
 - Logo is "loading"
-- Arrow2 shown
+- Then Arrow2 shown
 - Sent status are appearing
 - Right side is shown
 - Number of emails sent is growing
